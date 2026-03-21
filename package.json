@@ -1,0 +1,49 @@
+{
+  "name": "spx-studio",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^1.8.3",
+    "lucide-react": "^0.525.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hot-toast": "^2.6.0",
+    "react-icons": "^4.12.0",
+    "react-router-dom": "^6.30.1",
+    "react-toastify": "^11.0.5",
+    "socket.io-client": "^4.8.1",
+    "styled-components": "^6.1.15",
+    "zustand": "^5.0.12"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "tauri": "tauri",
+    "tauri:dev": "concurrently \"npm start\" \"npm run tauri dev\"",
+    "tauri:build": "npm run build && npm run tauri build"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.10.1",
+    "concurrently": "^8.0.0",
+    "react-scripts": "5.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ],
+    "rules": {
+      "react-hooks/exhaustive-deps": "off"
+    }
+  }
+}
