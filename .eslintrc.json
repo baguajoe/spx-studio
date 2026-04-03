@@ -1,0 +1,14 @@
+{
+  "extends": ["react-app"],
+  "rules": {
+    "import/first": "off",
+    "no-undef": "off",
+    "no-use-before-define": "off",
+    "no-unused-vars": "off",
+    "no-restricted-globals": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "import/no-anonymous-default-export": "off",
+    "default-case": "off",
+    "no-useless-concat": "off"
+  }
+}

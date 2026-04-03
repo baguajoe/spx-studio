@@ -1,0 +1,588 @@
+/* SignupForm.css - StreamPireX Dark Theme Signup Form */
+
+/* Container */
+.signup-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #0a1628;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #e0e0e0;
+}
+
+/* Header */
+.signup-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.signup-header h2 {
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+/* Step Indicator */
+.step-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.step-indicator span {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.step-indicator span.active {
+    background: rgba(0, 255, 200, 0.15);
+    color: #00ffc8;
+    border-color: #00ffc8;
+}
+
+/* Form Sections */
+.form-step {
+    min-height: 400px;
+}
+
+.form-step h3 {
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Step Description */
+.step-description {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 24px;
+    font-size: 0.95rem;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-row .form-group {
+    margin-bottom: 0;
+}
+
+/* Labels */
+.signup-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+/* Inputs */
+.signup-form input,
+.signup-form select,
+.signup-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+}
+
+.signup-form input::placeholder,
+.signup-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.signup-form input:focus,
+.signup-form select:focus,
+.signup-form textarea:focus {
+    outline: none;
+    border-color: #00ffc8;
+    box-shadow: 0 0 0 3px rgba(0, 255, 200, 0.15);
+}
+
+.signup-form input.error,
+.signup-form select.error {
+    border-color: #ef4444;
+}
+
+.signup-form select option {
+    background: #0a1628;
+    color: #ffffff;
+}
+
+/* Error Text */
+.error-text {
+    color: #ef4444;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+.error-message {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #ef4444;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+/* ============================================
+   CREATOR TYPE CARDS (Step 2)
+   ============================================ */
+
+.creator-type-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.creator-type-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.creator-type-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.creator-type-card.selected {
+    background: rgba(0, 255, 200, 0.08);
+    border-color: #00ffc8;
+}
+
+.creator-type-card input[type="checkbox"] {
+    display: none;
+}
+
+.creator-type-card .card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.creator-type-card .card-icon {
+    font-size: 2rem;
+    width: 50px;
+    text-align: center;
+}
+
+.creator-type-card .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.creator-type-card .card-description {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.creator-type-card .checkmark {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.creator-type-card.selected .checkmark {
+    background: #00ffc8;
+    color: #0a1628;
+}
+
+/* Skip Note */
+.skip-note {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Conditional Fields Sections */
+.conditional-fields {
+    margin-top: 24px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    border-left: 3px solid #00ffc8;
+}
+
+.conditional-fields h4 {
+    margin: 0 0 16px;
+    font-size: 1rem;
+    color: #00ffc8;
+}
+
+/* ============================================
+   CHECKBOX & RADIO GROUPS
+   ============================================ */
+
+.checkbox-group,
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.checkbox-label,
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: normal;
+    margin-bottom: 0;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.checkbox-label input,
+.radio-label input {
+    width: auto;
+    margin: 0;
+    accent-color: #00ffc8;
+}
+
+/* Horizontal Checkbox Group (platforms, etc.) */
+.checkbox-group.horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.checkbox-group.horizontal .checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+.checkbox-group.horizontal .checkbox-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.checkbox-group.horizontal .checkbox-item input {
+    accent-color: #00ffc8;
+    width: auto;
+}
+
+/* ============================================
+   SOCIAL MEDIA INPUTS (Step 3)
+   ============================================ */
+
+.social-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-input .social-icon {
+    width: 36px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.social-input input {
+    flex: 1;
+}
+
+/* ============================================
+   SIGNUP SUMMARY (Step 4)
+   ============================================ */
+
+.signup-summary {
+    background: rgba(0, 255, 200, 0.05);
+    border: 1px solid rgba(0, 255, 200, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.signup-summary h4 {
+    margin: 0 0 16px;
+    font-size: 1rem;
+    color: #00ffc8;
+}
+
+.signup-summary .summary-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.signup-summary .summary-item:last-child {
+    border-bottom: none;
+}
+
+.signup-summary .summary-item span:first-child {
+    font-size: 1.2rem;
+    width: 30px;
+}
+
+.signup-summary .summary-item span:nth-child(2) {
+    flex: 1;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.signup-summary .summary-item .included {
+    color: #00ffc8;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+/* ============================================
+   LEGAL SECTION (Step 4)
+   ============================================ */
+
+.legal-section {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.legal-section .checkbox-label {
+    margin-bottom: 1rem;
+}
+
+.legal-section a {
+    color: #00ffc8;
+    text-decoration: none;
+}
+
+.legal-section a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================
+   NAVIGATION & BUTTONS
+   ============================================ */
+
+.form-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 2rem;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.btn-primary {
+    background: #00ffc8;
+    color: #0a1628;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: #00e6b4;
+    box-shadow: 0 0 16px rgba(0, 255, 200, 0.3);
+}
+
+.btn-primary:disabled,
+.btn-primary.disabled {
+    background: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.4);
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+}
+
+.submit-btn {
+    margin-left: auto;
+}
+
+/* ============================================
+   LOGIN LINK
+   ============================================ */
+
+.login-link {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 2rem;
+}
+
+.login-link a {
+    color: #00ffc8;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Help Text */
+.help-text {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 8px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .signup-container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .form-row .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .signup-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-navigation {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .submit-btn {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .signup-container {
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+
+    .signup-header h2 {
+        font-size: 1.35rem;
+    }
+
+    .form-step {
+        min-height: auto;
+    }
+
+    .form-step h3 {
+        font-size: 1.25rem;
+    }
+
+    .signup-form input,
+    .signup-form select,
+    .signup-form textarea {
+        padding: 0.625rem;
+        font-size: 0.9rem;
+    }
+
+    .creator-type-card {
+        padding: 16px;
+    }
+
+    .creator-type-card .card-icon {
+        font-size: 1.5rem;
+        width: 40px;
+    }
+
+    .creator-type-card .card-title {
+        font-size: 1rem;
+    }
+
+    .checkbox-group.horizontal {
+        flex-direction: column;
+    }
+
+    .step-indicator span {
+        width: 32px;
+        height: 32px;
+        font-size: 0.85rem;
+    }
+}

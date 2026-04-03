@@ -1,0 +1,832 @@
+/* Podcast Dashboard - Complete Standalone CSS */
+/* StreamPireX Design System Implementation */
+
+/* ===== Base & Container Styles ===== */
+.podcast-dashboard-container {
+  max-width: 100%;
+  margin: 0 0;
+  padding: 40px 24px;
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+  min-height: 100vh;
+  font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #e1e4e8;
+}
+
+/* ===== Dashboard Header ===== */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 30px;
+  background: linear-gradient(145deg, #1f2937, #111827);
+  border-radius: 20px;
+  border: 2px solid #00ffc8;
+  box-shadow: 0 10px 40px rgba(0, 255, 200, 0.1);
+}
+
+.header-content h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin: 0 0 8px 0;
+  color: #00ffc8;
+  text-shadow: 0 0 10px rgba(0, 255, 200, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-content p {
+  font-size: 18px;
+  color: #8b949e;
+  margin: 0;
+}
+
+.create-podcast-btn {
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #00ffc8, #00e6b3);
+  color: #0d1117;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 255, 200, 0.3);
+}
+
+.create-podcast-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0, 255, 200, 0.4);
+  text-decoration: none;
+  color: #0d1117;
+}
+
+/* ===== Stats Grid ===== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: linear-gradient(145deg, #1f2937, #111827);
+  padding: 28px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  border: 1px solid #374151;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #00ffc8, #00e6b3);
+}
+
+.stat-card:nth-child(1):before {
+  background: linear-gradient(to bottom, #00ffc8, #00e6b3);
+}
+
+.stat-card:nth-child(2):before {
+  background: linear-gradient(to bottom, #3498db, #2980b9);
+}
+
+.stat-card:nth-child(3):before {
+  background: linear-gradient(to bottom, #9b59b6, #8e44ad);
+}
+
+.stat-card:nth-child(4):before {
+  background: linear-gradient(to bottom, #FF6600, #ff8833);
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0, 255, 200, 0.2);
+  border-color: #00ffc8;
+}
+
+.stat-icon {
+  font-size: 48px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.stat-content h3 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #e1e4e8;
+  margin: 0 0 4px 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.stat-content p {
+  font-size: 14px;
+  color: #8b949e;
+  margin: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ===== Podcasts Section ===== */
+.podcasts-section {
+  margin-bottom: 50px;
+}
+
+.podcasts-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #00ffc8;
+  margin: 0 0 24px 0;
+  text-shadow: 0 0 10px rgba(0, 255, 200, 0.2);
+}
+
+.podcasts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.podcast-card {
+  background: linear-gradient(145deg, #1f2937, #111827);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  border: 1px solid #374151;
+}
+
+.podcast-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0, 255, 200, 0.2);
+  border-color: #00ffc8;
+}
+
+.podcast-image {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #00ffc8 0%, #00e6b3 100%);
+}
+
+.podcast-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.podcast-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  opacity: 0.5;
+  color: #0d1117;
+}
+
+.status-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.status-badge.published {
+  background: linear-gradient(135deg, #00ffc8, #00e6b3);
+  color: #0d1117;
+  box-shadow: 0 2px 10px rgba(0, 255, 200, 0.4);
+}
+
+.status-badge.draft {
+  background: rgba(255, 191, 36, 0.95);
+  color: #0d1117;
+  box-shadow: 0 2px 10px rgba(251, 191, 36, 0.4);
+}
+
+.podcast-info {
+  padding: 20px;
+}
+
+.podcast-info h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #00ffc8;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+}
+
+.podcast-description {
+  font-size: 13px;
+  color: #8b949e;
+  line-height: 1.5;
+  margin: 0 0 12px 0;
+  min-height: 20px;
+}
+
+.podcast-stats {
+  display: flex;
+  gap: 20px;
+  padding: 12px 0;
+  border-top: 1px solid #374151;
+  border-bottom: 1px solid #374151;
+  margin-bottom: 15px;
+}
+
+.podcast-stats .stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.podcast-stats .stat-label {
+  font-size: 11px;
+  color: #8b949e;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.podcast-stats .stat-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #FF6600;
+}
+
+/* ===== Podcast Actions - COMPACT BUTTONS (unique class to avoid conflicts) ===== */
+.podcast-actions {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 8px !important;
+}
+
+.podcast-action-btn {
+  padding: 10px 12px !important;
+  border-radius: 8px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  text-decoration: none !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  border: 1px solid !important;
+  background: #374151 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.podcast-action-btn:hover {
+  text-decoration: none !important;
+  transform: none !important;
+}
+
+.podcast-action-btn.view {
+  color: #00ffc8 !important;
+  border-color: #00ffc8 !important;
+  background: #374151 !important;
+}
+
+.podcast-action-btn.view:hover {
+  background: rgba(0, 255, 200, 0.15) !important;
+}
+
+.podcast-action-btn.edit {
+  color: #3498db !important;
+  border-color: #3498db !important;
+  background: #374151 !important;
+}
+
+.podcast-action-btn.edit:hover {
+  background: rgba(52, 152, 219, 0.15) !important;
+}
+
+.podcast-action-btn.publish {
+  background: linear-gradient(135deg, #00ffc8, #00e6b3) !important;
+  color: #0d1117 !important;
+  border-color: transparent !important;
+}
+
+.podcast-action-btn.publish:hover {
+  box-shadow: 0 4px 15px rgba(0, 255, 200, 0.4) !important;
+}
+
+.podcast-action-btn.unpublish {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b) !important;
+  color: #0d1117 !important;
+  border-color: transparent !important;
+}
+
+.podcast-action-btn.unpublish:hover {
+  box-shadow: 0 4px 15px rgba(251, 191, 36, 0.4) !important;
+}
+
+.podcast-action-btn.delete {
+  background: rgba(255, 107, 107, 0.2) !important;
+  color: #ff6b6b !important;
+  border-color: #ff6b6b !important;
+}
+
+.podcast-action-btn.delete:hover {
+  background: rgba(255, 107, 107, 0.3) !important;
+}
+
+/* ===== Quick Actions Section - Colorful Gradient Cards ===== */
+.quick-actions-section {
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.quick-actions-section h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #00ffc8;
+  margin: 0 0 20px 0;
+  text-shadow: 0 0 10px rgba(0, 255, 200, 0.2);
+}
+
+.quick-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+/* Base Quick Action Card - Colorful Gradient Style */
+.quick-action-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 30px 20px;
+  border-radius: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  min-height: 120px;
+  text-align: center;
+  background: linear-gradient(135deg, #fd79a8, #e84393);
+  color: #ffffff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover effect - expanding circle */
+.quick-action-card:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+.quick-action-card:hover:before {
+  width: 300px;
+  height: 300px;
+}
+
+.quick-action-card:hover {
+  transform: translateY(-5px);
+  text-decoration: none;
+}
+
+/* Icon styling */
+.quick-action-card .action-icon {
+  font-size: 36px;
+  z-index: 1;
+  margin-bottom: 0;
+  filter: none;
+  color: inherit;
+  display: block;
+}
+
+.quick-action-card h3 {
+  z-index: 1;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+  color: inherit;
+}
+
+.quick-action-card p {
+  z-index: 1;
+  font-size: 12px;
+  margin: 0;
+  opacity: 0.9;
+  color: inherit;
+}
+
+/* Create New Podcast - Pink/Coral gradient */
+.quick-action-card:nth-child(1) {
+  background: linear-gradient(135deg, #fd79a8, #e84393);
+  color: #ffffff;
+  box-shadow: 0 8px 25px rgba(253, 121, 168, 0.3);
+}
+
+.quick-action-card:nth-child(1):hover {
+  box-shadow: 0 15px 40px rgba(253, 121, 168, 0.5);
+}
+
+/* Browse Podcasts - Teal/Cyan gradient */
+.quick-action-card:nth-child(2) {
+  background: linear-gradient(135deg, #00b894, #00cec9);
+  color: #0d1117;
+  box-shadow: 0 8px 25px rgba(0, 206, 201, 0.3);
+}
+
+.quick-action-card:nth-child(2):hover {
+  box-shadow: 0 15px 40px rgba(0, 206, 201, 0.5);
+}
+
+/* Creator Dashboard - Purple gradient */
+.quick-action-card:nth-child(3) {
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  color: #ffffff;
+  box-shadow: 0 8px 25px rgba(108, 92, 231, 0.3);
+}
+
+.quick-action-card:nth-child(3):hover {
+  box-shadow: 0 15px 40px rgba(108, 92, 231, 0.5);
+}
+
+/* Settings - Orange gradient */
+.quick-action-card:nth-child(4) {
+  background: linear-gradient(135deg, #FF6600, #ff8833);
+  color: #ffffff;
+  box-shadow: 0 8px 25px rgba(255, 102, 0, 0.3);
+}
+
+.quick-action-card:nth-child(4):hover {
+  box-shadow: 0 15px 40px rgba(255, 102, 0, 0.5);
+}
+
+/* ===== Empty State ===== */
+.empty-state {
+  text-align: center;
+  padding: 60px 30px;
+  background: linear-gradient(145deg, #1f2937, #111827);
+  border-radius: 20px;
+  border: 2px dashed #374151;
+  margin: 40px 0;
+}
+
+.empty-state-icon {
+  font-size: 80px;
+  margin-bottom: 20px;
+  color: #374151;
+}
+
+.empty-state h2 {
+  font-size: 28px;
+  color: #c9d1d9;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.empty-state p {
+  color: #8b949e;
+  font-size: 16px;
+  margin-bottom: 30px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.empty-state-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.empty-state-btn {
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.empty-state-btn.primary {
+  background: linear-gradient(135deg, #00ffc8, #00e6b3);
+  color: #0d1117;
+  box-shadow: 0 4px 15px rgba(0, 255, 200, 0.3);
+}
+
+.empty-state-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 255, 200, 0.4);
+}
+
+.empty-state-btn.secondary {
+  background: transparent;
+  color: #00ffc8;
+  border: 2px solid #00ffc8;
+}
+
+.empty-state-btn.secondary:hover {
+  background: rgba(0, 255, 200, 0.1);
+  transform: translateY(-2px);
+}
+
+/* ===== Loading Spinner ===== */
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  gap: 20px;
+}
+
+.spinner-icon {
+  width: 60px;
+  height: 60px;
+  border: 4px solid #374151;
+  border-top: 4px solid #00ffc8;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-message {
+  color: #8b949e;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* ===== Toast Notifications ===== */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 16px 20px;
+  border-radius: 10px;
+  font-weight: 500;
+  animation: slideIn 0.3s ease;
+  z-index: 9999;
+  min-width: 250px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.toast.success {
+  background: linear-gradient(135deg, #00ffc8, #00e6b3);
+  color: #0d1117;
+}
+
+.toast.error {
+  background: linear-gradient(135deg, #ff6b6b, #ff5252);
+  color: white;
+}
+
+.toast.loading {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease;
+}
+
+/* ===== Mobile Responsiveness ===== */
+@media (max-width: 1200px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .quick-actions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .podcast-dashboard-container {
+    padding: 24px 16px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .header-content h1 {
+    font-size: 32px;
+  }
+
+  .header-content p {
+    font-size: 16px;
+  }
+
+  .create-podcast-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .podcasts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .podcast-actions {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .quick-actions-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .quick-action-card {
+    padding: 25px 15px;
+    min-height: 100px;
+  }
+  
+  .quick-action-card .action-icon {
+    font-size: 28px;
+  }
+  
+  .quick-action-card h3 {
+    font-size: 13px;
+  }
+
+  .podcast-stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content h1 {
+    font-size: 24px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    flex-direction: row;
+    text-align: left;
+    padding: 20px;
+  }
+  
+  .stat-icon {
+    font-size: 36px;
+  }
+
+  .podcast-image {
+    height: 160px;
+  }
+  
+  .stat-content h3 {
+    font-size: 24px;
+  }
+  
+  .podcast-info {
+    padding: 16px;
+  }
+  
+  .quick-action-card {
+    padding: 20px 12px;
+    min-height: 90px;
+    gap: 8px;
+  }
+  
+  .quick-action-card .action-icon {
+    font-size: 24px;
+  }
+  
+  .quick-action-card h3 {
+    font-size: 12px;
+  }
+  
+  .quick-action-card p {
+    font-size: 10px;
+  }
+  
+  .empty-state {
+    padding: 40px 20px;
+  }
+  
+  .empty-state-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .empty-state-btn {
+    width: 100%;
+  }
+}
+
+/* ===== Scrollbar Styling ===== */
+.podcast-dashboard-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.podcast-dashboard-container::-webkit-scrollbar-track {
+  background: #0d1117;
+  border-radius: 5px;
+}
+
+.podcast-dashboard-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #00ffc8, #00e6b3);
+  border-radius: 5px;
+}
+
+.podcast-dashboard-container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #00e6b3, #00ffc8);
+}
+
+/* Fix faded metric numbers */
+.stat-card h3,
+.stat-card p,
+.stat-card .stat-value,
+.stat-card .stat-number,
+.metric-card h3,
+.metric-card p,
+.metric-card .value {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+/* Or if using specific class names */
+.stat-info h3 {
+    color: #8b949e;  /* Label color - can stay muted */
+}
+
+.stat-info p,
+.stat-info .number,
+.stat-info .value {
+    color: #ffffff !important;  /* Number should be bright white */
+    font-size: 2rem;
+    font-weight: 700;
+}

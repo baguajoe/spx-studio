@@ -1,0 +1,26 @@
+.create-avatar-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .avatar-creator-wrapper {
+    width: 100%;
+    height: 80vh;
+    margin-top: 20px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  /* Add to your CSS */
+.btn-danger {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-danger:hover {
+  background-color: darkred;
+}

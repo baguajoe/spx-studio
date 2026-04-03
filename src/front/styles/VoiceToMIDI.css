@@ -1,0 +1,73 @@
+.vtm-root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #0d1117 100%);
+  color: #c9d1d9;
+  font-family: 'JetBrains Mono', 'Inter', monospace;
+  overflow: auto;
+}
+.vtm-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-bottom: 1px solid #21262d;
+  background: #161b2266;
+  flex-shrink: 0;
+}
+.vtm-header-left { display: flex; align-items: center; gap: 8px; }
+.vtm-header-right { display: flex; gap: 6px; }
+.vtm-title { font-size: 0.85rem; font-weight: 700; color: #00ffc8; }
+.vtm-subtitle { font-size: 0.65rem; color: #5a7088; }
+.vtm-status { margin-left: auto; font-size: 0.65rem; color: #5a7088; }
+.vtm-tabs { display: flex; gap: 4px; padding: 6px 12px; border-bottom: 1px solid #21262d; flex-shrink: 0; }
+.vtm-tab {
+  padding: 3px 10px; border-radius: 4px; border: 1px solid #30363d;
+  background: transparent; color: #5a7088; font-size: 0.68rem; cursor: pointer;
+}
+.vtm-tab.active { background: #00ffc820; border-color: #00ffc8; color: #00ffc8; }
+.vtm-body { display: flex; flex: 1; min-height: 0; overflow: hidden; }
+.vtm-main { flex: 1; display: flex; flex-direction: column; padding: 12px; gap: 10px; overflow: auto; }
+.vtm-sidebar { width: 180px; display: flex; flex-direction: column; padding: 10px; gap: 8px; border-left: 1px solid #21262d; overflow: auto; flex-shrink: 0; }
+.vtm-btn {
+  padding: 4px 12px; border-radius: 6px; border: 1px solid #30363d;
+  background: #21262d; color: #c9d1d9; font-size: 0.72rem; cursor: pointer; transition: all 0.15s;
+}
+.vtm-btn:hover { border-color: #00ffc8; color: #00ffc8; }
+.vtm-btn.active { background: #00ffc820; border-color: #00ffc8; color: #00ffc8; }
+.vtm-btn.danger { border-color: #ff4444; color: #ff4444; }
+.vtm-btn.danger.active { background: #ff444420; }
+.vtm-pitch-display {
+  display: flex; align-items: center; gap: 12px; padding: 10px 14px;
+  background: #161b22; border-radius: 10px; border: 1px solid #21262d;
+}
+.vtm-pitch-center { text-align: center; min-width: 90px; }
+.vtm-note-name { font-size: 2rem; font-weight: 700; color: #00ffc8; line-height: 1; font-family: 'JetBrains Mono', monospace; }
+.vtm-freq-label { font-size: 0.6rem; color: #5a7088; }
+.vtm-meter-row { display: flex; gap: 8px; }
+.vtm-chord-badge { padding: 4px 8px; border-radius: 6px; background: #af52de30; border: 1px solid #af52de; font-size: 0.65rem; }
+.vtm-section { display: flex; flex-direction: column; gap: 6px; padding: 10px 12px; background: #161b22; border-radius: 10px; border: 1px solid #21262d; }
+.vtm-section-title { font-size: 0.68rem; font-weight: 700; color: #5a7088; text-transform: uppercase; letter-spacing: 0.08em; }
+.vtm-row { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.vtm-label { font-size: 0.65rem; color: #5a7088; min-width: 60px; }
+.vtm-select { flex: 1; background: #0d1117; color: #c9d1d9; border: 1px solid #30363d; border-radius: 5px; padding: 3px 6px; font-size: 0.7rem; }
+.vtm-pad-grid { display: flex; gap: 6px; padding: 8px; background: #21262d; border-radius: 8px; border: 1px solid #30363d; flex-wrap: wrap; }
+.vtm-pad {
+  width: 44px; height: 44px; border-radius: 6px; border: 1px solid #30363d;
+  background: #0d1117; color: #c9d1d9; font-size: 0.6rem; cursor: pointer;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.1s;
+}
+.vtm-pad.active { background: #00ffc830; border-color: #00ffc8; color: #00ffc8; }
+.vtm-pad-note { font-size: 0.9rem; font-weight: 700; }
+.vtm-meter { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.vtm-meter-bar { width: 8px; border-radius: 4px; position: relative; overflow: hidden; background: #1a2332; }
+.vtm-meter-fill { position: absolute; bottom: 0; width: 100%; border-radius: 4px; transition: height 0.05s; }
+.vtm-meter-label { font-size: 0.55rem; color: #5a7088; }
+.vtm-knob-row { display: flex; gap: 3px; flex-wrap: wrap; margin-left: auto; }
+.vtm-knob-btn {
+  width: 28px; height: 28px; border-radius: 50%; border: 1px solid #30363d;
+  background: #0d1117; color: #c9d1d9; font-size: 0.6rem; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+.vtm-knob-btn.active { border-color: #00ffc8; background: #00ffc820; color: #00ffc8; }
